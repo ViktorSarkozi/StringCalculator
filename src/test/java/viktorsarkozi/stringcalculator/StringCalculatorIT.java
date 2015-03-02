@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package viktorsarkozi.stringcalculator;
 
 import org.junit.After;
@@ -44,6 +40,16 @@ public class StringCalculatorIT {
     public void returnSumIfStringIsAnyDigit(){
         assertEquals(18,stringCalculator.add("1,9,8"));
         assertEquals(41,stringCalculator.add("3,3,35"));
+    }
+    
+    @Test
+    public void useAnyDelimeterSuccesfully(){
+        StringCalculator s_cal1=new StringCalculator("/t");
+        StringCalculator s_cal2=new StringCalculator(";");
+        StringCalculator s_cal3=new StringCalculator("/n");
+        assertEquals(s_cal1.add("3/t4/t5"),s_cal2.add("3;4;5"));
+        assertEquals(s_cal3.add("3/n4/n5"),s_cal1.add("3/t4/t5"));
+        assertEquals(s_cal3.add("3/n4/n5"),s_cal2.add("3;4;5"));
     }
     
     

@@ -40,5 +40,11 @@ public class StringCalculatorIT {
         assertEquals(6,stringCalculator.add("3,3"));
     }
     
+    @Test
+    public void returnSumIfStringIsAnyDigit(){
+        assertEquals(18,stringCalculator.add("1,9,8"));
+        assertEquals(41,stringCalculator.add("3,3,35"));
+    }
+    
     
 }

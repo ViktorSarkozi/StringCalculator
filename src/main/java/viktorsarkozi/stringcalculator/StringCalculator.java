@@ -10,10 +10,13 @@ public class StringCalculator {
         if (number.isEmpty()) {
             return 0;
         }
+        
+        int sum=0;
         String[] numbers = number.split(",");
-        if (numbers.length == 1) {
-            return Integer.valueOf(numbers[0]);
+        
+        for (String digit : numbers) {
+            sum+=Integer.valueOf(digit);
         }
-        return Integer.valueOf(numbers[0]) + Integer.valueOf(numbers[1]);
+        return sum;
     }
 }

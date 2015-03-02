@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package viktorsarkozi.stringcalculator;
 
 /**
@@ -11,4 +6,10 @@ package viktorsarkozi.stringcalculator;
  */
 public class StringCalculator {
     
+    public int add(String number){
+        if(number.isEmpty()){
+            return 0;
+        }
+        return Integer.valueOf(number);
+    }
 }

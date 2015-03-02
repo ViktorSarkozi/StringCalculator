@@ -28,5 +28,17 @@ public class StringCalculatorIT {
         assertEquals(0,stringCalculator.add("0"));
     }
     
+    @Test
+    public void returnNumberIfStringIsOneDigit(){
+        assertEquals(1,stringCalculator.add("1"));
+        assertEquals(9,stringCalculator.add("9"));
+    }
+    
+    @Test
+    public void returnSumIfStringIsTwoDigit(){
+        assertEquals(10,stringCalculator.add("1,9"));
+        assertEquals(6,stringCalculator.add("3,3"));
+    }
+    
     
 }
